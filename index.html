@@ -37,15 +37,22 @@ body {
             //embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
           
           embedded_svc.settings.extraPrechatInfo = [
-                {
-                    "entityName": "Lead" ,
-                    "saveToTranscript " : "LeadId",
-                    "entityFieldMaps": [
-                        {"isExactMatch": true , "fieldName": "FirstName" , "doCreate": true , "doFind": true , "label": "First Name"} ,
-                        {"isExactMatch": true , "fieldName": "Email" , "doCreate": true , "doFind": true , "label": "Email"} ,
-                        {"isExactMatch": true , "fieldName": "LastName" , "doCreate": true , "doFind": true , "label": "Last Name"}
-                    ]
-                }
+                "entityName": "Contact",
+    "saveToTranscript": "ContactId",
+    "showOnCreate": true,
+    "entityFieldMaps": [{
+        "isExactMatch": false,
+        "fieldName": "FirstName",
+        "doCreate": true,
+        "doFind": false,
+        "label": "Voornaam"
+    }, {
+        "isExactMatch": false,
+        "fieldName": "LastName",
+        "doCreate": true,
+        "doFind": false,
+        "label": "Achternaam"
+    }]
                 
                 
             ];
