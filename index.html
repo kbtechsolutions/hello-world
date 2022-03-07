@@ -43,19 +43,69 @@ body {
     "entityFieldMaps": [{
         "isExactMatch": false,
         "fieldName": "FirstName",
-        "doCreate": true,
+        "doCreate": false,
         "doFind": false,
         "label": "Voornaam"
     }, {
         "isExactMatch": false,
         "fieldName": "LastName",
-        "doCreate": true,
+        "doCreate": false,
         "doFind": false,
         "label": "Achternaam"
+    }, {
+        "isExactMatch": true,
+        "fieldName": "Email_GG__c",
+        "doCreate": false,
+        "doFind": true,
+        "label": "E-mail"
     }]
-                
-                
-            ];
+},
+{
+    "entityName": "Account",
+    "showOnCreate": true,
+    "linkToEntityName": "Case",
+    "linkToEntityField": "AccountId",
+    "saveToTranscript": "AccountId",
+    "entityFieldMaps": [
+        {
+            "isExactMatch": false,
+            "fieldName": "LastName",
+            "doCreate": true,
+            "doFind": false,
+            "label": "Achternaam"
+        },
+        {
+            "isExactMatch": false,
+            "fieldName": "RecordTypeId",
+            "doCreate": true,
+            "doFind": false,
+            "label": "RecordTypeId"
+        },
+        {
+            "fieldName": "PersonEmail",
+            "doCreate": true,
+            "label": "E-mail"
+        },
+        {
+            "doCreate": false,
+            "doFind": true,
+            "fieldName": "Email_GG__pc",
+            "isExactMatch": true,
+            "label": "E-mail"
+        }]
+},
+{
+    "entityName": "Case",
+    "showOnCreate": true,
+    "entityFieldMaps": [
+        {
+            "doCreate": true,
+            "doFind": false,
+            "fieldName": "Status",
+            "isExactMatch": false,
+            "label": "CaseStatus"
+        }]
+}];
     
             embedded_svc.settings.enabledFeatures = ['LiveAgent'];
             embedded_svc.settings.entryFeature = 'LiveAgent';
