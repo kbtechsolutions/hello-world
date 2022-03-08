@@ -36,19 +36,7 @@ body {
             //embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
             //embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
           <!-- this is no longer recent -->
-          embedded_svc.settings.extraPrechatInfo = [{
-                "entityName": "Lead",
-    "saveToTranscript": "LeadId",
-    "showOnCreate": true,
-    "entityFieldMaps": [{
-        "isExactMatch": false,
-        "fieldName": "Email",
-        "doCreate": true,
-        "doFind": true,
-        "label": "Email"
-    }] 
-                        
-          }];
+          
     
             embedded_svc.settings.enabledFeatures = ['LiveAgent'];
             embedded_svc.settings.entryFeature = 'LiveAgent';
