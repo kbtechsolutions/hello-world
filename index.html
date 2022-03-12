@@ -42,6 +42,32 @@
 		  "label":"Email", 
 		  "transcriptFields": ["Email__c"]
 		}];
+		
+		embedded_svc.settings.extraPrechatInfo = [{
+			"entityFieldMaps": [{
+				"doCreate": false,
+				"doFind": false,
+				"fieldName": "LastName",
+				"isExactMatch": false,
+				"label": "Last Name"
+			}, {
+				"doCreate": false,
+				"doFind": false,
+				"fieldName": "FirstName",
+				"isExactMatch": false,
+				"label": "First Name"
+			}, {
+				"doCreate": false,
+				"doFind": false,
+				"fieldName": "Email",
+				"isExactMatch": true,
+				"label": "Email"
+			}],
+			"entityName": "Lead",
+			"saveToTranscript": "LeadId",
+			"showOnCreate": false
+		}];
+		
 		/*
 		embedded_svc.settings.extraPrechatFormDetails = [{
 		
